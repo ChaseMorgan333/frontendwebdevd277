@@ -8,12 +8,18 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
 }
-#mainimg{
-    width: 200px;
-    height: 200px;
+.mainimg{
+    width: 300px;
+    height: 300px;
     display: block;
     margin: auto;
+}
 
+.mainimg2{
+    width: 600px;
+    height: 300px;
+    display: block;
+    margin: auto;
 }
 
 header{
@@ -65,7 +71,7 @@ nav li a:hover{
 /* The following tags are for the main sections of the page */
 
 section, aside{
-    width: 300px;
+    width: 600px;
     border-style: solid;
     border-color: black;
     border-width: 2px;
@@ -81,4 +87,6 @@ footer{
     height: 200px;
     background-color: bisque;
 }
-
+ul{
+    overflow: hidden;
+}
