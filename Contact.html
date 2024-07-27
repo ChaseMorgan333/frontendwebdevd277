@@ -9,7 +9,7 @@
     </head>
     <body>
         <header>
-            <img class="mainimg" src="images/texas.jpg">
+            <img class="mainimg" src="images/texas.jpg"><br>
             The Great State of Texas
         </header>
         
@@ -22,17 +22,83 @@
                 <li><a class="active" href="Contact.html">Contact Us</a></li>
             </ul>
         </nav>
-        <section>
-            Section 1 Area
-            <img src="images/placeholder.jpeg">
+        <!--Main content of page starts here -->
+        <main>
+            <section>
+                <h3>Please contact us by using the form below:</h3>
+                <form action="file:///C:/Users/Chase/OneDrive/Desktop/Western%20Governer's%20University/D2777FrontEndWebDev/frontendwebdevd277/Contact.html" method="post">
+                    <p>
+                        <label for="first">First Name:</label>
+                        <input type="text" name="first" id="first" placeholder="First Name">
+                    </p>
+                    <p>
+                        <label for="last">Last Name:</label>
+                        <input type="text" name="last" id="last" placeholder="Last Name">
+                    </p>
+                    <p>
+                        <label for="email">Email:</label>
+                        <input type="email" name="email" id="email" placeholder="Email Address">
+                    </p>
+                    <p>
+                        <label for="confirmemail">Confirm Email:</label>
+                       <input type="email" name="confirmemail" id="confirmemail" placeholder="Confirm Email">
+                       <label id="note"></label>
+                    </p>
+                    <p>
+                        <label for="message">Message:</label>
+                        <textarea name="message" id="message" placeholder="Your message goes here."></textarea>
+
+                    </p>
+                    <p>
+                        <input type="submit" title="Submit" id="submit" disabled>
+                        
+                            
+                    </p>
             
-        </section>
-        <aside>
-            Aside Area 
-            <img src="images/placeholder.jpeg">
-        </aside>
+                </form>
+                
+            </section>
+            <aside>
+                Aside Area 
+                <img style="float: left;" src="images/300px-Texas_in_United_States.svg.png">
+                <ul>
+                    <li>Some interesting facts here:</li>
+                    <li>A chart here:</li>
+                    <li>Another chart here:</li>
+                </ul>
+    
+            </aside>
+        </main>
         <footer>
             Footer Area
+     
         </footer>
+        <script type="text/javascript">
+            
+            
+            const confirmemail = document.getElementById("confirmemail");
+            const email = document.getElementById("email");
+            const note = document.getElementById("note");
+            const submit = document.getElementById("submit");
+            
+            confirmemail.addEventListener("input", myFunc);
+            email.addEventListener("input", myFunc);
+
+            function myFunc(){
+                if(confirmemail.value == email.value){
+                note.innerHTML = "emails match.";
+                note.setAttribute("class", "green");
+                submit.disabled = false;   
+                }else{
+                note.innerHTML = "emails must match!";
+                note.setAttribute("class", "red");
+                submit.disabled = true;
+                } 
+            }
+
+           
+
+            
+        </script>
     </body>
 </html>

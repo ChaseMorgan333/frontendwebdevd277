@@ -1,5 +1,6 @@
 :root{
-    --bg-color:#888fa5;
+    --bg-color:#687db6;
+
 }
 
 body{
@@ -7,13 +8,18 @@ body{
     background-image: url(images/bluebonnets.webp);
     background-repeat: no-repeat;
     background-size: cover;
+    background-position-y: 200px;
 }
 .mainimg{
     width: 300px;
     height: 300px;
     display: block;
     margin: auto;
+    border-width: 4px;
     border-radius: 25px;
+    border-style: inset;
+    border-color: orange;
+    filter: drop-shadow(3px 10px 3px black);
 }
 
 .mainimg2{
@@ -21,20 +27,40 @@ body{
     height: 300px;
     display: block;
     margin: auto;
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 42x;
+    border-color: orange;
+    filter: drop-shadow(3px 10px 3px black);
+}
+
+/*floating the image to the left of the section content*/
+main img{
+    float: left;
 }
 
 header{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     text-align: center;
-    font-size: xx-large;
+    color: orange;
     font-style: italic;
+    font-size: xx-large;
     font-weight: bold;
-    background-color: var(--bg-color);
+    /*background: linear-gradient(0deg, var(--bg-color), rgb(0, 0, 0)) ;*/
+    padding: 40px;
+    text-shadow: 3px 3px 0px #000;
+    /*background-image: url(images/night-sky-with-stars_1048-7871.jpg);*/
+    background: 
+   linear-gradient(to bottom, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0) 59%, var(--bg-color) 100%),
+   url('images/night-sky-with-stars_1048-7871.jpg');
+
 }
 
 /* The following tags are for the navigation section */
 
 nav{
    text-align: center; 
+   text-transform: uppercase;
 }
 
 nav ul {
@@ -60,34 +86,109 @@ nav li a{
 }
 
 nav li a:hover{
-    background-color: #555;
-    color: white;
+    background-color: var(--bg-color);
+    color: orange;
 }
 
 .active{
-    color: blue;
+    color: orange;
+    font-size: larger;
+    background-color: var(--bg-color);
     
+}
+
+a:hover{
+    font-size: larger;
 }
 
 /* The following tags are for the main sections of the page */
+main{
+    display: flex;
+    justify-content: center;
+    margin: 50px;
+    padding-bottom: 50px;
+
+}
 
 section, aside{
     width: 600px;
-    border-style: solid;
-    border-color: black;
-    border-width: 2px;
-    margin: auto;
+    border-style: inset;
+    border-color: gray;
+    border-width: 6px;
     background-color: antiquewhite;
     background-repeat: no-repeat;
+    margin: 20px;
+    padding: 20px;
     
     
+} 
+
+section img{
+    height: 200px;
+    width: 200px;
 }
+
+
 
 footer{
     align-content: center;
     height: 200px;
     background-color: bisque;
+    clear: both;
 }
-ul{
+ol, ul{
     overflow: hidden;
 }
+
+table, th, td {
+    border: 1px solid black;
+  }
+
+  /* This section is for forms */
+  input, textarea{
+    box-sizing: border-box;
+    width: 400px;
+    padding: 10px;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+  }
+
+  label{
+    width: 120px;
+    display: inline-block;
+    text-align: right;
+    margin-right: 8px;
+    font-size: large;
+  }
+
+  textarea{
+    height: 200px;
+  }
+
+ input[type=submit]{
+    width: 200px;
+    background-color: #09f;
+    color: white;
+    padding: 15px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+ }
+
+ input[type=submit]:hover {
+    background-color: #07d;
+ }
+
+ .green{
+    color: green;
+ }
+
+ .red{
+    color: red;
+ }
+
+ input:disabled, input:disabled:hover{
+    background-color: red;
+    cursor: not-allowed;
+ }
