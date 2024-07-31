@@ -3,6 +3,8 @@
 
 }
 
+
+
 body{
     margin:0px;
     background-image: url(images/bluebonnets.webp);
@@ -128,9 +130,30 @@ section img{
     width: 200px;
 }
 
+section h2{
+    text-align: center;
+    text-decoration: underline;
+}
+
+section ol{
+    font-weight: bold;
+}
+
+aside h3{
+    text-align: center;
+    text-decoration: underline;
+}
+
+aside img{
+    height: 200px;
+    width: 300px;
+    border-radius: 25px;
+}
+
 
 
 footer{
+    text-align: center;
     align-content: center;
     height: 200px;
     background-color: bisque;
@@ -140,9 +163,14 @@ ol, ul{
     overflow: hidden;
 }
 
-table, th, td {
-    border: 1px solid black;
-  }
+li span{
+    display: inline;
+    color: red;
+    text-decoration: underline;
+    font-size: large;
+}
+
+
 
   /* This section is for forms */
   input, textarea{
@@ -191,4 +219,26 @@ table, th, td {
  input:disabled, input:disabled:hover{
     background-color: red;
     cursor: not-allowed;
+ }
+
+ #poptable{
+    
+    border: 4px solid black;
+    color: var(--bg-color);
+    border-collapse: collapse;
+    width: 500px;
+    height: 200px;
+    text-align: center;
+ }
+
+ tr, td, th{
+    border: 2px dashed rgb(161, 154, 154);
+    font-size: large;
+ }
+
+ caption{
+    font-size: larger;
+    text-transform: capitalize;
+    text-decoration: underline;
+    font-weight: bold;
  }
