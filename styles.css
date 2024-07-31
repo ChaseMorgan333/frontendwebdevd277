@@ -11,6 +11,7 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     background-position-y: 200px;
+    font-family: 'Courier New', Courier, monospace;
 }
 .mainimg{
     width: 300px;
@@ -42,6 +43,7 @@ main img{
 }
 
 header{
+    position: relative;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     text-align: center;
     color: orange;
@@ -57,6 +59,25 @@ header{
    url('images/night-sky-with-stars_1048-7871.jpg');
 
 }
+/*the folowing tag styles a div and uses absolute positioning within its parent; the parent element is positioned using relative positioning*/
+#headerdiv{
+    position: absolute;
+    left: 0px;
+    top: 20%;
+    bottom: 0px;
+    width: 17%;
+    background-color: #00000000;
+    text-align: start;
+    overflow: auto;
+    font-size: x-large;
+
+}
+
+#headerdiv a:hover, #headerdiv a:visited{
+    color: rgb(0, 158, 250);
+}
+    
+
 
 /* The following tags are for the navigation section */
 
@@ -150,6 +171,14 @@ aside img{
     border-radius: 25px;
 }
 
+#contactphoto{
+    border-radius: 0;
+    display: flex;
+    width: 100%;
+    height: auto;
+}
+
+
 
 
 footer{
@@ -221,12 +250,14 @@ li span{
     cursor: not-allowed;
  }
 
+
+ /*This section is for tables*/
  #poptable{
     
     border: 4px solid black;
     color: var(--bg-color);
     border-collapse: collapse;
-    width: 500px;
+    width: 100%;
     height: 200px;
     text-align: center;
  }
